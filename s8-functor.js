@@ -1,4 +1,3 @@
-// 함수자
 const Container = function (val) {
   this.value = val;
 };
@@ -24,3 +23,12 @@ Container.prototype.map = function (fn) {
 let double = (x) => x + x;
 const doubleNum = Container.of(3).map(double);
 console.log(doubleNum);
+
+const maxDouble = Container.of(3)
+  .map(double)
+  .map(double)
+  .map(double)
+  .map(double)
+  .map(double);
+
+console.log(maxDouble);
