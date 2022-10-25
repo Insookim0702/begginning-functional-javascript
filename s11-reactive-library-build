@@ -1,0 +1,31 @@
+// 불변셩
+let x = 5;
+let y = x;
+
+y = x * 2; // y의 상태를 변경한다.
+
+console.log("x = " + x);
+console.log("x = " + y);
+
+let a = "hello";
+let b = a;
+a = a + " world";
+console.log("a = ", a);
+console.log("b = ", b);
+
+// 객체와 배열값 변경
+let object = { foo: "hello" };
+let object2 = object;
+
+object.foo += " world";
+
+console.log(object);
+console.log(object2);
+
+let xObject = { foo: "hello" };
+let yObject = xObject;
+
+Object.freeze(xObject);
+yObject.foo += " world";
+console.log("x = " + xObject.foo);
+console.log("x = " + yObject.foo);
